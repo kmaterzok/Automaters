@@ -23,6 +23,8 @@ To execute, run the following command under compliant shell:
 ## [repos-update.sh](src/repos-update.sh)
 It fetches commits for specific branches and pulls them automatically for all the repositories within a defined directory. Non-existent branches are ignored.
 
+![A GIF showing repos-update.sh in action.](imgs/repos-update.gif)
+
 Important variables:
 
 * ```PATH_TO_REPOS``` - A path to the directory that contains desired repositories.
