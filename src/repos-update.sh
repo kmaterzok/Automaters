@@ -21,7 +21,7 @@ LOGGING_PATH='/home/myuser/Documents/Repos/km-rpupd.log'
 UPDATED_BRANCHES='develop|release|hotfix|master'
 
 
-echo "Sync start at: " "$(date)" >> ${LOGGING_PATH}
+echo "Sync start at: $(date)" >> "${LOGGING_PATH}"
 # go to dir with repos
 cd "$PATH_TO_REPOS" || ( echo "fatal: Reporitory path invalid!" && exit 1 )
 # names of repo dirs
@@ -71,5 +71,5 @@ for SG_REPO_DIR in $REPO_DIRS; do
 done
 
 echo -e "\033[1;31;31mSync finish at: $(date)\033[0m"
-echo "Sync finish at: $(date)" >> ${LOGGING_PATH}
+echo "Sync finish at: $(date)" >> "${LOGGING_PATH}"
 
