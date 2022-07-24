@@ -20,6 +20,18 @@ To execute, run the following command under compliant shell:
 ```
 
 
+## [mass-wav-to-flac.sh](src/mass-wav-to-flac.sh)
+
+It converts WAV files into FLAC files and moves metadata to their new counterparts.
+
+**Important:** This tool requires _kid3-cli_ and _flac_ installed in your system.
+
+To execute, run the following command under compliant shell:
+```
+./mass-wav-to-flac.sh
+```
+
+
 ## [repos-update.sh](src/repos-update.sh)
 It fetches commits for specific branches and pulls them automatically for all the repositories within a defined directory. Non-existent branches are ignored.
 
