@@ -35,7 +35,7 @@ To execute, run the following command under compliant shell:
 ./gmaps-points-to-osmand-gpx.sh input_file.md output_file.gpx
 ```
 
-* ```input_file.md``` - input file containing adequate content in markdown. Note: Only lines with links are parsed.
+* ```input_file.md``` - input file containing adequate content in MarkDown. Note: Only lines with links are parsed.
 * ```output_file.gpx``` - output file saved as GPX file for importing into Osmand app.
 
 
