@@ -20,6 +20,25 @@ To execute, run the following command under compliant shell:
 ```
 
 
+## [gmaps-points-to-osmand-gpx.sh](src/gmaps-points-to-osmand-gpx.sh)
+It converts a list of attractions saved in notation ```* [ ] [Name](Google Maps point URL)``` into a corresponding GPX file.
+
+Sample input file line written in MarkDown:
+
+```
+* [ ] [Letenské sady](https://www.google.com/maps/place/Letensk%C3%A9+sady/@50.0939387,14.4176668,16z/data=!4m5!3m4!1s0x470b94c41d2ba9e1:0xe8e8f97c360eadf6!8m2!3d50.09653!4d14.4275399)
+```
+
+To execute, run the following command under compliant shell:
+
+```
+./gmaps-points-to-osmand-gpx.sh input_file.md output_file.gpx
+```
+
+* ```input_file.md``` - input file containing adequate content in markdown. Note: Only lines with links are parsed.
+* ```output_file.gpx``` - output file saved as GPX file for importing into Osmand app.
+
+
 ## [mass-wav-to-flac.sh](src/mass-wav-to-flac.sh)
 
 It converts WAV files into FLAC files and moves metadata to their new counterparts.
