@@ -46,7 +46,9 @@ echo "    <name>$DESTINATION_FILE_NAME</name>
 MATCHING_REGEX="^\*\ \[\ \]\ \[(.*)\]\((.*)!3d([0-9.]{1,})!4d([0-9.]{1,})(.*)\)$"
 while read -r FILE_LINE; do
   if [[ $FILE_LINE =~ $MATCHING_REGEX ]]; then
-    echo "  <wpt lat=\"${BASH_REMATCH[3]}\" lon=\"${BASH_REMATCH[4]}\"><name>${BASH_REMATCH[1]}</name></wpt>" >> "$DESTINATION_FILE_NAME"
+    ORIGINAL_NAME=`echo ${BASH_REMATCH[1]}`
+    VALID_NAME=`echo "${ORIGINAL_NAME//&/&amp;}"`
+    echo "  <wpt lat=\"${BASH_REMATCH[3]}\" lon=\"${BASH_REMATCH[4]}\"><name>${VALID_NAME}</name></wpt>" >> "$DESTINATION_FILE_NAME"
   fi
 done < "$SOURCE_FILE_NAME"
 
